@@ -35,7 +35,8 @@ RUN mkdir -p /home/msfuser/.msf4 && \
 # کپی فایل‌ها
 COPY handler.rc /home/msfuser/handler.rc
 COPY start.sh /start.sh
-RUN chmod +x /start.sh
+COPY run-msf.sh /run-msf.sh
+RUN chmod +x /start.sh /run-msf.sh
 
 # پورت‌ها
 EXPOSE 22 443 4444 8080
