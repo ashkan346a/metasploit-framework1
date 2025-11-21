@@ -1,6 +1,11 @@
 # Metasploit Framework - Railway Deployment
 
-## 🔧 تغییرات اخیر
+## 🔧 آخرین تغییرات (v2.1)
+- ✅ رفع خطای PPA brightbox (404 Not Found)
+- ✅ استفاده از `ruby:3.1-slim` base image
+- ✅ بهبود سرعت build و کاهش حجم
+
+## 🔧 تغییرات قبلی (v2.0)
 - ✅ رفع خطای Syntax در Dockerfile (کامنت فارسی)
 - ✅ نصب Ruby 3.1 (به جای 3.0.2) برای سازگاری با Metasploit
 - ✅ پیکربندی SSH Server با پسورد 8181

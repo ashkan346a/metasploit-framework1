@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ruby:3.1-slim AS base
 
 # تنظیم غیرتعاملی
 ENV DEBIAN_FRONTEND=noninteractive
@@ -38,21 +38,8 @@ RUN apt-get update && \
     patch \
     rustc \
     cargo \
-    software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
-# نصب Ruby 3.1 از PPA
-RUN add-apt-repository -y ppa:brightbox/ruby-ng && \
-    apt-get update && \
-    apt-get install -y ruby3.1 ruby3.1-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# تنظیم Ruby 3.1 به عنوان نسخه پیش‌فرض
-RUN update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby3.1 1 && \
-    update-alternatives --install /usr/bin/gem gem /usr/bin/gem3.1 1 && \
-    ruby --version
 
 # تنظیم SSH
 RUN mkdir -p /var/run/sshd && \
