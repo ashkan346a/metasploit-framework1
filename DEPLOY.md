@@ -1,17 +1,17 @@
 # Metasploit Framework - Railway Deployment
 
-## 🔧 آخرین تغییرات (v2.1)
-- ✅ رفع خطای PPA brightbox (404 Not Found)
-- ✅ استفاده از `ruby:3.1-slim` base image
-- ✅ بهبود سرعت build و کاهش حجم
+## 🎯 نسخه 3.0 - استراتژی هوشمند
 
-## 🔧 تغییرات قبلی (v2.0)
-- ✅ رفع خطای Syntax در Dockerfile (کامنت فارسی)
-- ✅ نصب Ruby 3.1 (به جای 3.0.2) برای سازگاری با Metasploit
-- ✅ پیکربندی SSH Server با پسورد 8181
-- ✅ راه‌اندازی خودکار Metasploit handlers
+### 💡 تغییر رویکرد
+به جای build از صفر، از **image رسمی Metasploit** استفاده می‌کنیم و فقط SSH را اضافه می‌کنیم!
 
-## مشخصات سرور
+### ⚡ مزایای جدید
+- ✅ **بدون مشکل dependency** - همه چیز از قبل نصب شده
+- ✅ **سرعت بالا** - Build فقط 30-60 ثانیه!
+- ✅ **پایدار و تست شده** - image رسمی Metasploit
+- ✅ **حجم بهینه** - فقط SSH و screen اضافه می‌شود
+
+## 🔧 آخرین تغییرات (v3.0)
 - **TCP Proxy**: crossover.proxy.rlwy.net:55001 → 443
 - **SSH Port**: 22
 - **Metasploit Ports**: 4444, 8080

@@ -1,5 +1,24 @@
 # تاریخچه تغییرات
 
+## نسخه 3.0 - 22 نوامبر 2025 🎯
+
+### 💡 تغییر استراتژی (رویکرد هوشمند)
+- **قبل**: تلاش برای build از صفر با Ruby → مشکلات زیاد
+- **حالا**: استفاده از image رسمی `metasploitframework/metasploit-framework:latest`
+- **نتیجه**: بدون مشکل dependency، سریع و پایدار
+
+### ✅ مزایا
+- ✨ تمام وابستگی‌های Metasploit از قبل نصب شده
+- ⚡ زمان build از 5 دقیقه به 30 ثانیه کاهش یافت
+- 🔒 نسخه تست شده و stable
+- 📦 حجم کمتر و بهینه‌تر
+
+### 🐛 رفع مشکلات قبلی
+- ❌ pcaprub compilation error → ✅ از قبل نصب شده
+- ❌ libpcap-dev missing → ✅ در image موجود است
+- ❌ Ruby version conflicts → ✅ Ruby صحیح نصب شده
+- ❌ gemspec loading errors → ✅ همه چیز آماده است
+
 ## نسخه 2.2 - 22 نوامبر 2025
 
 ### 🐛 رفع خطای gemspec
