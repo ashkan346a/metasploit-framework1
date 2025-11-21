@@ -3,19 +3,21 @@ set -e
 
 echo "[*] Starting Metasploit Framework Server..."
 
-# شروع SSH
+# شروع SSH (Alpine style)
 echo "[*] Starting SSH service..."
-service ssh start || /usr/sbin/sshd
+/usr/sbin/sshd -D &
+SSH_PID=$!
 
-# بررسی وضعیت SSH
 sleep 2
-if pgrep -x "sshd" > /dev/null; then
+
+# بررسی SSH
+if ps aux | grep -v grep | grep sshd > /dev/null; then
     echo "[+] SSH service started successfully on port 22"
 else
-    echo "[!] Warning: SSH service may not be running properly"
+    echo "[!] Warning: SSH may not be running"
 fi
 
-# نمایش اطلاعات اتصال
+# نمایش اطلاعات
 echo "======================================"
 echo "SSH Connection Info:"
 echo "User: root or msfuser"
@@ -23,20 +25,17 @@ echo "Password: 8181"
 echo "Port: 22"
 echo "======================================"
 
-# شروع metasploit console با handler در background
-echo "[*] Starting Metasploit console with handlers..."
+# شروع Metasploit
+echo "[*] Starting Metasploit console..."
 if [ -f /home/msfuser/handler.rc ]; then
-    su - msfuser -c "screen -dmS msf_console msfconsole -r /home/msfuser/handler.rc" || \
-    msfconsole -r /home/msfuser/handler.rc &
-    echo "[+] Metasploit console started with handler configuration"
+    screen -dmS msf_console msfconsole -r /home/msfuser/handler.rc
+    echo "[+] Metasploit with handlers started"
 else
-    su - msfuser -c "screen -dmS msf_console msfconsole" || \
-    msfconsole &
+    screen -dmS msf_console msfconsole
     echo "[+] Metasploit console started"
 fi
 
-echo "[*] You can attach to the console with: screen -r msf_console"
-echo "[*] Server is ready!"
+echo "[*] Server ready! Use: screen -r msf_console"
 
-# نگه داشتن کانتینر
+# نگه داشتن container
 tail -f /dev/null
