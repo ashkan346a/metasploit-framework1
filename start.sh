@@ -22,7 +22,8 @@ echo "======================================"
 echo "SSH Connection Info:"
 echo "User: root or msfuser"
 echo "Password: 8181"
-echo "Port: 22"
+echo "Port: 443 (mapped via Railway TCP Proxy)"
+echo "Command: ssh -p 55001 root@crossover.proxy.rlwy.net"
 echo "======================================"
 
 # شروع Metasploit

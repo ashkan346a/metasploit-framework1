@@ -19,7 +19,7 @@ RUN mkdir -p /var/run/sshd /root/.ssh && \
     echo 'root:8181' | chpasswd && \
     sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config && \
-    sed -i 's/#Port 22/Port 22/' /etc/ssh/sshd_config && \
+    sed -i 's/#Port 22/Port 443/' /etc/ssh/sshd_config && \
     ssh-keygen -A
 
 # ایجاد کاربر msfuser
