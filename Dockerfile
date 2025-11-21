@@ -60,16 +60,12 @@ RUN gem install bundler
 # تنظیم دایرکتوری کاری
 WORKDIR /opt/metasploit-framework
 
-# کپی Gemfile ها برای cache بهتر
-COPY Gemfile Gemfile.lock metasploit-framework.gemspec ./
-COPY lib/metasploit/framework/version.rb ./lib/metasploit/framework/version.rb
+# کپی کل پروژه (برای دسترسی به تمام فایل‌های مورد نیاز gemspec)
+COPY . /opt/metasploit-framework/
 
 # نصب gems
 RUN bundle config set --local without 'development test' && \
     bundle install --jobs=4 --retry=3
-
-# کپی بقیه پروژه
-COPY . /opt/metasploit-framework/
 
 # تنظیم مالکیت فایل‌ها
 RUN chown -R msfuser:msfuser /opt/metasploit-framework
@@ -81,11 +77,10 @@ ENV PATH="/opt/metasploit-framework:${PATH}"
 RUN mkdir -p /home/msfuser/.msf4 && \
     chown -R msfuser:msfuser /home/msfuser
 
+# اسکریپت شروع را اجرایی کن
+RUN chmod +x /opt/metasploit-framework/start.sh
+
 # پورت‌های مورد نیاز
 EXPOSE 22 443 4444 8080
 
-# کپی اسکریپت شروع
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-CMD ["/start.sh"]
+CMD ["/opt/metasploit-framework/start.sh"]
