@@ -1,5 +1,11 @@
 # Metasploit Framework - Railway Deployment
 
+## 🔧 تغییرات اخیر
+- ✅ رفع خطای Syntax در Dockerfile (کامنت فارسی)
+- ✅ نصب Ruby 3.1 (به جای 3.0.2) برای سازگاری با Metasploit
+- ✅ پیکربندی SSH Server با پسورد 8181
+- ✅ راه‌اندازی خودکار Metasploit handlers
+
 ## مشخصات سرور
 - **TCP Proxy**: crossover.proxy.rlwy.net:55001 → 443
 - **SSH Port**: 22

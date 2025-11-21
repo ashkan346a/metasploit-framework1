@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
 
-# نصب وابستگی‌های اولیه و Ruby
+# نصب وابستگی‌های اولیه
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     tzdata \
@@ -21,8 +21,6 @@ RUN apt-get update && \
     screen \
     nano \
     vim \
-    ruby \
-    ruby-dev \
     libssl-dev \
     zlib1g-dev \
     liblzma-dev \
@@ -35,8 +33,26 @@ RUN apt-get update && \
     libgdbm-dev \
     libncurses5-dev \
     libgdbm-compat-dev \
+    autoconf \
+    bison \
+    patch \
+    rustc \
+    cargo \
+    software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# نصب Ruby 3.1 از PPA
+RUN add-apt-repository -y ppa:brightbox/ruby-ng && \
+    apt-get update && \
+    apt-get install -y ruby3.1 ruby3.1-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# تنظیم Ruby 3.1 به عنوان نسخه پیش‌فرض
+RUN update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby3.1 1 && \
+    update-alternatives --install /usr/bin/gem gem /usr/bin/gem3.1 1 && \
+    ruby --version
 
 # تنظیم SSH
 RUN mkdir -p /var/run/sshd && \
@@ -51,13 +67,25 @@ RUN useradd -m -s /bin/bash msfuser && \
     usermod -aG sudo msfuser && \
     echo "msfuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# کپی کل پروژه Metasploit
-WORKDIR /opt/metasploit-framework
-COPY --chown=msfuser:msfuser . /opt/metasploit-framework/
+# نصب bundler
+RUN gem install bundler
 
-# نصب bundler و وابستگی‌های Ruby
-RUN gem install bundler -v '~> 2.0' && \
+# تنظیم دایرکتوری کاری
+WORKDIR /opt/metasploit-framework
+
+# کپی Gemfile ها برای cache بهتر
+COPY Gemfile Gemfile.lock metasploit-framework.gemspec ./
+COPY lib/metasploit/framework/version.rb ./lib/metasploit/framework/version.rb
+
+# نصب gems
+RUN bundle config set --local without 'development test' && \
     bundle install --jobs=4 --retry=3
+
+# کپی بقیه پروژه
+COPY . /opt/metasploit-framework/
+
+# تنظیم مالکیت فایل‌ها
+RUN chown -R msfuser:msfuser /opt/metasploit-framework
 
 # افزودن metasploit به PATH
 ENV PATH="/opt/metasploit-framework:${PATH}"
