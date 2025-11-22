@@ -1,0 +1,122 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           📤 Railway Deployment Instructions                     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚠️  فایل‌ها در Railway وجود ندارند و باید دستی منتقل شوند.
+
+═══════════════════════════════════════════════════════════════════
+روش 1: استفاده از Railway CLI (توصیه می‌شود)
+═══════════════════════════════════════════════════════════════════
+
+1️⃣  در ترمینال محلی (Parrot OS):
+
+cd /home/offsec/Documents/GitHub/metasploit-framework1/railway_deploy
+
+# اتصال به Railway
+sudo railway ssh \
+  --project=0e85ae85-ca7e-4d9a-a408-888cc8b9b6f6 \
+  --environment=fb2cd976-9332-4286-adc9-69889109456e \
+  --service=95d051e6-d8d9-48cf-85fb-a7a41c1ecced
+
+2️⃣  در Railway container، فایل‌ها را دستی ایجاد کنید:
+
+# ایجاد دایرکتوری
+mkdir -p /root
+
+# کپی محتوای فایل‌ها (از ترمینال دیگر)
+# برای هر فایل:
+cat > /root/railway_persistence_tables.sql << 'EOF'
+[محتوای فایل را paste کنید]
+EOF
+
+cat > /root/railway_handler_final.rc << 'EOF'
+[محتوای فایل را paste کنید]
+EOF
+
+cat > /root/post_exploit_railway.rc << 'EOF'
+[محتوای فایل را paste کنید]
+EOF
+
+cat > /root/setup_railway.sh << 'EOF'
+[محتوای فایل را paste کنید]
+EOF
+
+chmod +x /root/setup_railway.sh
+
+3️⃣  اجرای setup:
+
+bash /root/setup_railway.sh
+
+═══════════════════════════════════════════════════════════════════
+روش 2: استفاده از Git Repository
+═══════════════════════════════════════════════════════════════════
+
+1️⃣  فایل‌ها را در Git push کنید:
+
+cd /home/offsec/Documents/GitHub/metasploit-framework1
+git add railway_deploy/*
+git commit -m "Add Railway deployment files"
+git push origin master
+
+2️⃣  در Railway container:
+
+apt-get update && apt-get install -y git
+cd /root
+git clone https://github.com/ashkan346a/metasploit-framework1.git
+cd metasploit-framework1/railway_deploy
+bash setup_railway.sh
+
+═══════════════════════════════════════════════════════════════════
+روش 3: استفاده از base64 encoding (سریع)
+═══════════════════════════════════════════════════════════════════
+
+1️⃣  در Parrot OS، encode کنید:
+
+cd /home/offsec/Documents/GitHub/metasploit-framework1/railway_deploy
+
+echo "=== railway_persistence_tables.sql ==="
+base64 -w 0 railway_persistence_tables.sql
+echo ""
+echo ""
+
+echo "=== railway_handler_final.rc ==="
+base64 -w 0 railway_handler_final.rc
+echo ""
+echo ""
+
+echo "=== setup_railway.sh ==="
+base64 -w 0 setup_railway.sh
+echo ""
+
+2️⃣  در Railway container، decode کنید:
+
+echo "[BASE64_STRING]" | base64 -d > /root/railway_persistence_tables.sql
+echo "[BASE64_STRING]" | base64 -d > /root/railway_handler_final.rc
+echo "[BASE64_STRING]" | base64 -d > /root/setup_railway.sh
+
+chmod +x /root/setup_railway.sh
+bash /root/setup_railway.sh
+
+═══════════════════════════════════════════════════════════════════
+فایل‌های مورد نیاز:
+═══════════════════════════════════════════════════════════════════
+
+✅ railway_persistence_tables.sql   - Database schema
+✅ railway_handler_final.rc          - Metasploit handler
+✅ post_exploit_railway.rc           - Post-exploitation
+✅ install_persistence.rc            - Persistence installer
+✅ setup_railway.sh                  - Setup script
+
+═══════════════════════════════════════════════════════════════════
+بعد از Setup:
+═══════════════════════════════════════════════════════════════════
+
+# شروع handler
+msfconsole -r /root/railway_handler_final.rc
+
+# بررسی دیتابیس
+PGPASSWORD=oNnmkkGTsBScDMhJGyuPWbHqfBegneKo \
+psql -h postgres.railway.internal -U postgres -d railway \
+-c "SELECT COUNT(*) FROM persistent_sessions;"
+
+═══════════════════════════════════════════════════════════════════
