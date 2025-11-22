@@ -102,3 +102,67 @@ rspec.failures
 
 #Ignore any base disk store files
 db/modules_metadata_base.pstore
+
+# ═══════════════════════════════════════════════════════════════
+# Custom Project Files - DO NOT IGNORE
+# ═══════════════════════════════════════════════════════════════
+
+# Allow important shell scripts
+!*.sh
+!build_railway_professional.sh
+!configure_railway_db.sh
+!install_persistence_modules.sh
+!master_deploy.sh
+!deploy_to_railway.sh
+!generate_railway_commands.sh
+
+# Allow resource files
+!*.rc
+!railway_handler_final.rc
+!railway_handler_professional.rc
+!post_exploit_railway.rc
+!install_persistence.rc
+
+# Allow markdown documentation
+!*.md
+!COMPLETE_SETUP_GUIDE.md
+!README_FINAL.md
+!PROJECT_SUMMARY.txt
+!RAILWAY_COPY_COMMANDS.txt
+
+# Allow SQL files
+!*.sql
+!railway_persistence_tables.sql
+
+# Allow APK files (our payloads)
+!*.apk
+!SystemUpdate_Railway_Professional.apk
+
+# Allow deployment directory
+!railway_deploy/
+!railway_deploy/*
+
+# Ignore temporary files
+*.tmp
+*.bak
+*_old
+*_backup
+
+# Ignore APK build artifacts
+*_base.apk
+*_rebuilt.apk
+*_aligned.apk
+base_*.apk
+rebuilt_*.apk
+aligned_*.apk
+
+# Ignore decompiled directories
+*_decompiled/
+*_dec/
+
+# Ignore keystores (security)
+*.keystore
+*.jks
+
+# But allow our documentation keystores info
+!KEYSTORE_INFO.txt
