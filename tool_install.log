@@ -1,0 +1,54 @@
+[sudo] password for offsec: E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 121866 (apt-get)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 121866 (apt-get)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 121866 (apt-get)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 121866 (apt-get)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 121866 (apt-get)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.11/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Cloning into '/opt/TheFatRat'...
+Selecting previously unselected package libjsoncpp25:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 575451 files and directories currently installed.)
+Preparing to unpack .../libjsoncpp25_1.9.5-4_amd64.deb ...
+Unpacking libjsoncpp25:amd64 (1.9.5-4) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../librhash0_1.4.3-3_amd64.deb ...
+Unpacking librhash0:amd64 (1.4.3-3) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../cmake-data_3.25.1-1_all.deb ...
+Unpacking cmake-data (3.25.1-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../cmake_3.25.1-1_amd64.deb ...
+Unpacking cmake (3.25.1-1) ...
+Setting up libjsoncpp25:amd64 (1.9.5-4) ...
+Setting up librhash0:amd64 (1.4.3-3) ...
+Setting up cmake-data (3.25.1-1) ...
+Setting up cmake (3.25.1-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+Scanning application launchers
+Removing duplicate launchers or broken launchers
+ [-] Missing executable file kcmshell5 at launcher /usr/share/applications/kcm_trash.desktop
+Launchers are updated

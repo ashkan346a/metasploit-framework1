@@ -1,0 +1,20 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     🔥 Advanced Payload Injector - Memory Resident Backdoor      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [1/10] Analyzing Original APK...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Original APK found: 16M
+📦 Package Name: com.darooyab.med
+🚀 Main Activity: com.darooyab.med.MainActivity
+📱 SDK: min=21, target=34
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 [2/10] Generating Advanced Meterpreter Payload (HTTPS)...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Overriding user environment variable 'OPENSSL_CONF' to enable legacy functions.
+/home/offsec/Documents/GitHub/metasploit-framework1/config/boot.rb:4: warning: already initialized constant GEMFILE_EXTENSIONS
+/usr/share/metasploit-framework/config/boot.rb:4: warning: previous definition of GEMFILE_EXTENSIONS was here
+Error: One or more options failed to validate: HandlerSSLCert.
+❌ Failed to generate payload
